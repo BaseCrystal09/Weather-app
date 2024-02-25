@@ -1,0 +1,86 @@
+* {
+  text-align: center;
+  font-family: monospace;
+  font-style: normal;
+}
+h1,
+h3 {
+  font-family: monospace;
+  font-weight: 100;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+h1 {
+  font-size: 40px;
+  color: #fed347;
+}
+h2 {
+  font-size: 40px;
+}
+p {
+  margin-bottom: 40px;
+}
+.search-weather input::placeholder {
+  color: #fed347;
+  font-size: 15px;
+  text-align: start;
+}
+
+#search-input {
+  margin: 20px 0 20px 0;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px 70px 10px 10px;
+  box-shadow: 5px 5px 5px #FED347;
+  text-align: start !important;
+}
+.submit-input {
+  font-size: 15px;
+  color: #fed347;
+  background-color: transparent;
+  border: 2px solid #fed347;
+  border-radius: 20px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+.submit-input:hover {
+  background-color: #fed347;
+  color: white;
+  cursor: pointer;
+}
+i {
+  position: relative;
+  top: 7px;
+  font-size: 40px;
+  color: #fed347;
+}
+.bi-wind,
+.bi-moisture {
+  font-size: 15px;
+  position: relative;
+  top: 0;
+  color: black;
+}
+.current-weather-section {
+  font-family: monospace;
+}
+.current-temperature {
+  font-size: 70px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+#feels-like {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+#time {
+  margin: 10px;
+}
+footer {
+  margin-top: 100px;
+  color: grey;
+}
