@@ -39,40 +39,40 @@ function currentWeather(response) {
 
   let imageUpdate = document.querySelector("#weather-image");
   if (description.toLowerCase() === "clear sky") {
-    imageUpdate.src = "sun.png";
+    imageUpdate.src = "img/sun.png";
   } else if (description.toLowerCase() === "few clouds") {
-    imageUpdate.src = "partly-cloudy.png";
+    imageUpdate.src = "img/partly-cloudy.png";
   } else if (
     description.toLowerCase() === "scattered clouds" ||
     description.toLowerCase() === "broken clouds"
   ) {
-    imageUpdate.src = "clouds.png";
+    imageUpdate.src = "img/clouds.png";
   } else if (description.toLowerCase() === "overcast clouds") {
-    imageUpdate.src = "cloud.png";
+    imageUpdate.src = "img/cloud.png";
   } else if (
     description.toLowerCase() === "shower rain" ||
     description.toLowerCase() === "rain"
   ) {
-    imageUpdate.src = "rain.png";
+    imageUpdate.src = "img/rain.png";
   } else if (
     description.toLowerCase() === "light rain" ||
     description.toLowerCase() === "light intensity shower rain" ||
     description.toLowerCase() === "light intensity drizzle"
   ) {
-    imageUpdate.src = "weather-app.png";
+    imageUpdate.src = "img/weather-app.png";
   } else if (
     description.toLowerCase() === "moderate rain" ||
     description.toLowerCase() === "heavy intensity rain"
   ) {
-    imageUpdate.src = "heavy-rain.png";
+    imageUpdate.src = "img/heavy-rain.png";
   } else if (description.toLowerCase() === "	thunderstorm") {
-    imageUpdate.src = "storm.png";
+    imageUpdate.src = "img/storm.png";
   } else if (description.toLowerCase() === "snow") {
-    imageUpdate.src = "snow.png";
+    imageUpdate.src = "img/snow.png";
   } else if (description.toLowerCase() === "mist") {
-    imageUpdate.src = "fog.png";
+    imageUpdate.src = "img/fog.png";
   } else {
-    imageUpdate.src = "no-results.png";
+    imageUpdate.src = "img/no-results.png";
   }
   getForecast(response.data.city);
 }
@@ -169,38 +169,38 @@ function displayForecast(response) {
         description.toLowerCase() === "scattered clouds" ||
         description.toLowerCase() === "broken clouds"
       ) {
-        imgSrc = "clouds.png";
+        imgSrc = "img/clouds.png";
       } else if (description.toLowerCase() === "few clouds") {
-        imgSrc = "partly-cloudy.png";
+        imgSrc = "img/partly-cloudy.png";
       } else if (description.toLowerCase() === "overcast clouds") {
-        imgSrc = "cloud.png";
+        imgSrc = "img/cloud.png";
       } else if (description.toLowerCase() === "sky is clear") {
-        imgSrc = "sun.png";
+        imgSrc = "img/sun.png";
       } else if (
         description.toLowerCase() === "light rain" ||
         description.toLowerCase() === "light intensity shower rain" ||
         description.toLowerCase() === "light intensity drizzle"
       ) {
-        imgSrc = "weather-app.png";
+        imgSrc = "img/weather-app.png";
       } else if (
         description.toLowerCase() === "shower rain" ||
         description.toLowerCase() === "rain"
       ) {
-        imgSrc = "rain.png";
+        imgSrc = "img/rain.png";
       } else if (
         description.toLowerCase() === "moderate rain" ||
         description.toLowerCase() === "heavy intensity rain"
       ) {
-        imgSrc = "heavy-rain.png";
+        imgSrc = "img/heavy-rain.png";
       } else if (description.toLowerCase() === "thunderstorm") {
-        imgSrc = "storm.png";
+        imgSrc = "img/storm.png";
       } else if (description.toLowerCase() === "snow") {
-        imgSrc = "snow.png";
+        imgSrc = "img/snow.png";
       } else if (
         description.toLowerCase() === "mist" ||
         description.toLowerCase() === "fog"
       ) {
-        imgSrc = "fog.png";
+        imgSrc = "img/fog.png";
       }
 
       forecastHtml += `
