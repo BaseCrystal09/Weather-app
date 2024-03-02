@@ -1,8 +1,8 @@
 // Default city and API key
 
 let defaultCity = "Ljubljana";
-let apiKey = "c9ce87d7214ace3c82826125848d3dfa";
-let defaultUrl = `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&appid=${apiKey}&units=metric`;
+let apiKey = "e1bb20f9dod0447c200aeabaa3t3f05c";
+let defaultUrl = `https://api.shecodes.io/weather/v1/current?query=${defaultCity}&key=${apiKey}&units=metric`;
 
 function fetchDefaultWeather() {
   getWeather(defaultUrl);
