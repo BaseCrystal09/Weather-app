@@ -197,7 +197,10 @@ function displayForecast(response) {
         imgSrc = "img/heavy-rain.png";
       } else if (description.toLowerCase() === "thunderstorm") {
         imgSrc = "img/storm.png";
-      } else if (description.toLowerCase() === "snow") {
+      } else if (
+        description.toLowerCase() === "snow" ||
+        description.toLowerCase() === "light snow"
+      ) {
         imgSrc = "img/snow.png";
       } else if (
         description.toLowerCase() === "mist" ||
