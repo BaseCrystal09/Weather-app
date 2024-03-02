@@ -11,19 +11,19 @@ function fetchDefaultWeather() {
 // Current weather element
 
 function currentWeather(response) {
-  let temperature = Math.round(response.data.main.temp);
+  let temperature = Math.round(response.data.temperature.current);
   let updateTemp = document.querySelector(".current-temperature");
   updateTemp.innerHTML = `${temperature}°C`;
 
-  let feelsTemperature = Math.round(response.data.main.feels_like);
+  let feelsTemperature = Math.round(response.data.temperature.feels_like);
   let feelsLikeElement = document.querySelector("#feels-like");
   feelsLikeElement.innerHTML = `Feels like ${feelsTemperature}°C`;
 
-  let description = response.data.weather[0].description;
+  let description = response.data.condition.description;
   let weatherDescription = document.querySelector("#description");
   weatherDescription.innerHTML = description;
 
-  let humidity = Math.round(response.data.main.humidity);
+  let humidity = Math.round(response.data.temperature.humidity);
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `${humidity}%`;
 
@@ -39,40 +39,40 @@ function currentWeather(response) {
 
   let imageUpdate = document.querySelector("#weather-image");
   if (description.toLowerCase() === "clear sky") {
-    imageUpdate.src = "img/sun.png";
+    imageUpdate.src = "sun.png";
   } else if (description.toLowerCase() === "few clouds") {
-    imageUpdate.src = "img/partly-cloudy.png";
+    imageUpdate.src = "partly-cloudy.png";
   } else if (
     description.toLowerCase() === "scattered clouds" ||
     description.toLowerCase() === "broken clouds"
   ) {
-    imageUpdate.src = "img/clouds.png";
+    imageUpdate.src = "clouds.png";
   } else if (description.toLowerCase() === "overcast clouds") {
-    imageUpdate.src = "img/cloud.png";
+    imageUpdate.src = "cloud.png";
   } else if (
     description.toLowerCase() === "shower rain" ||
     description.toLowerCase() === "rain"
   ) {
-    imageUpdate.src = "img/rain.png";
+    imageUpdate.src = "rain.png";
   } else if (
     description.toLowerCase() === "light rain" ||
     description.toLowerCase() === "light intensity shower rain" ||
     description.toLowerCase() === "light intensity drizzle"
   ) {
-    imageUpdate.src = "img/weather-app.png";
+    imageUpdate.src = "weather-app.png";
   } else if (
     description.toLowerCase() === "moderate rain" ||
     description.toLowerCase() === "heavy intensity rain"
   ) {
-    imageUpdate.src = "img/heavy-rain.png";
+    imageUpdate.src = "heavy-rain.png";
   } else if (description.toLowerCase() === "	thunderstorm") {
-    imageUpdate.src = "img/storm.png";
+    imageUpdate.src = "storm.png";
   } else if (description.toLowerCase() === "snow") {
-    imageUpdate.src = "img/snow.png";
+    imageUpdate.src = "snow.png";
   } else if (description.toLowerCase() === "mist") {
-    imageUpdate.src = "img/fog.png";
+    imageUpdate.src = "fog.png";
   } else {
-    imageUpdate.src = "img/no-results.png";
+    imageUpdate.src = "no-results.png";
   }
   getForecast(response.data.city);
 }
@@ -89,13 +89,13 @@ function handleSearchSubmit(event) {
   searchCity.innerHTML = searchInput.value;
 
   let city = searchInput.value;
-  let apiKey = "c9ce87d7214ace3c82826125848d3dfa";
-  let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiKey = "e1bb20f9dod0447c200aeabaa3t3f05c";
+  let apiurl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
   getWeather(apiurl);
 }
 
-// timestamp element for forecast
+// Timestamp element for forecast
 
 function daysinWeek(timestamp) {
   let date = new Date(timestamp * 1000);
