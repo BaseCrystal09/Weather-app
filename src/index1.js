@@ -67,7 +67,10 @@ function currentWeather(response) {
     imageUpdate.src = "img/heavy-rain.png";
   } else if (description.toLowerCase() === "	thunderstorm") {
     imageUpdate.src = "img/storm.png";
-  } else if (description.toLowerCase() === "snow") {
+  } else if (
+    description.toLowerCase() === "snow" ||
+    description.toLowerCase() === "light snow"
+  ) {
     imageUpdate.src = "img/snow.png";
   } else if (description.toLowerCase() === "mist") {
     imageUpdate.src = "img/fog.png";
