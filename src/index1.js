@@ -199,7 +199,8 @@ function displayForecast(response) {
         imgSrc = "img/storm.png";
       } else if (
         description.toLowerCase() === "snow" ||
-        description.toLowerCase() === "light snow"
+        description.toLowerCase() === "light snow" ||
+        description.toLowerCase() === "rain and snow"
       ) {
         imgSrc = "img/snow.png";
       } else if (
